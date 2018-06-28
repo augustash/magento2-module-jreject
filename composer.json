@@ -1,0 +1,28 @@
+{
+  "name": "augustash/module-jreject",
+  "description": "Enable jQuery Browser Rejection library",
+  "type": "magento2-module",
+  "license": [
+    "proprietary"
+  ],
+  "authors": [
+    {
+      "name": "August Ash",
+      "email": "chagnes@augustash.com"
+    }
+  ],
+  "require": {
+    "augustash/module-core": "~1.0.1"
+  },
+  "repositories": {
+    "augustash-core": {
+      "type": "vcs",
+      "url": "https://github.com/augustash/magento2-module-augustash-core.git"
+    }
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ]
+  }
+}

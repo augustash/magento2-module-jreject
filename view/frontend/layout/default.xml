@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    
+    <head>
+        <css src="Augustash_Jreject::css/jquery.reject.css"/>
+        <!-- <script type="text/javascript" src="Augustash_Jreject::js/jquery.reject.js"/> -->
+    </head>
+
+    <body>
+        <referenceBlock name="head.additional">
+            <block class="Augustash\Jreject\Block\Jreject" name="augustash_jreject.jreject" template="Augustash_Jreject::jreject.phtml"/>
+        </referenceBlock>
+
+        <!-- <referenceContainer name="before.body.end">
+            <block class="Augustash\Jreject\Block\Jreject" name="augustash_jreject.jrejectjs" template="Augustash_Jreject::js/jquery.reject.js" />
+        </referenceContainer> -->
+    </body>
+</page>

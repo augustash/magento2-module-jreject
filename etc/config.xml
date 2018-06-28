@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<augustash_jreject>
+			<general>
+				<enabled>0</enabled>
+        <close>1</close>
+        <close_esc>1</close_esc>
+				<header><![CDATA[Did you know that your Internet Browser is out of date?]]></header>
+				<paragraph1><![CDATA[Your browser is out of date, and may not be compatible with our website. A list of the most popular web browsers can be found below.]]></paragraph1>
+				<paragraph2><![CDATA[Just click on the icons to get to the download page]]></paragraph2>
+        <close_message><![CDATA[By closing this window you acknowledge that your experience on this website may be degraded.]]></close_message>
+        <close_link><![CDATA[Close This Window]]></close_link>
+        <close_url><![CDATA[#]]></close_url>
+				<ie_version><![CDATA[10]]></ie_version>
+			</general>
+    </augustash_jreject>
+    </default>
+</config>

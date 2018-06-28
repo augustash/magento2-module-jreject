@@ -1,0 +1,46 @@
+<?php
+$jRejectEnabled = $block->getIsJrejectEnabled();
+$jRejectAllowClose = $block->getIsJrejectAllowedClose();
+$jRejectAllowCloseEsc = $block->getIsJrejectAllowedCloseByEsc();
+$jRejectHeader = $block->getJrejectHeader();
+$jRejectParagraphOne = $block->getJrejectParagraphOne();
+$jRejectParagraphTwo = $block->getJrejectParagraphTwo();
+$jRejectCloseMessage = $block->getJrejectgetCloseMessage();
+$jRejectCloseLink = $block->getJrejectgetCloseLink();
+$jRejectCloseUrl = $block->getJrejectgetCloseUrl();
+$jRejectIeVersion = $block->getJrejectIeVersion();
+$jRejectImages = $block->getViewFileUrl('Augustash_Jreject::images') . "/";
+?>
+
+<?php if ($jRejectEnabled) : ?>
+  <script type="text/javascript">
+    require([
+        'jquery',
+        'jreject_script'
+    ], function($) {
+        jQuery(document).ready(function() {
+
+             $.reject({
+                // Set the IE version and below that is not supported. // use all: true to test.
+                reject: { msie: <?php echo $jRejectIeVersion ?> },
+                // Define the browsers to suggest to download instead their current browser.
+                display: ['chrome','firefox', 'safari'],
+                // Insert our custom content controlled via the admin.
+                header: "<?php echo $jRejectHeader ?>",
+                paragraph1: "<?php echo $jRejectParagraphOne ?>",
+                paragraph2: "<?php echo $jRejectParagraphTwo ?>",
+                // Allow closing of window
+                close: <?php echo $jRejectAllowClose ?>,
+                // Allows closing of window with esc key
+                closeESC: <?php echo $jRejectAllowCloseEsc ?>,
+                // Message displayed below closing link
+                closeMessage: "<?php echo $jRejectCloseMessage ?>",
+                closeLink: "<?php echo $jRejectCloseLink ?>",
+                closeURL: "<?php echo $jRejectCloseUrl ?>",
+                // Path where images are located  
+                imagePath: "<?php echo $jRejectImages ?>"
+            }); 
+        });
+    });
+</script>
+<?php endif; ?>

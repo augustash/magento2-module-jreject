@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="augustash_jreject" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label><![CDATA[jReject Settings]]></label>
+            <tab>augustash</tab>
+            <resource>Augustash_Jreject::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label><![CDATA[jReject Settings]]></label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                   <label><![CDATA[Enable]]></label>
+                   <comment><![CDATA[Enable this to enable outdated browser alert.]]></comment>
+                   <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="close" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                   <label><![CDATA[Close]]></label>
+                   <comment><![CDATA[Enable this to allow the alert to be closed.]]></comment>
+                   <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="close_esc" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                   <label><![CDATA[Close by Esc]]></label>
+                   <comment><![CDATA[Enable this to allow the alert to be closed by the Esc key.]]></comment>
+                   <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="header" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Alert Header</label>
+                    <comment><![CDATA[Default: Did you know that your Internet Browser is out of date?]]></comment>
+                </field>
+                <field id="paragraph1" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Alert Paragraph 1</label>
+                    <comment><![CDATA[Default: Your browser is out of date, and may not be compatible with our website. A list of the most popular web browsers can be found below.]]></comment>
+                </field>
+                <field id="paragraph2" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Alert Paragraph 2</label>
+                    <comment><![CDATA[Default: Click on the icons to get to the download page:]]></comment>
+                </field>
+                <field id="close_message" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Alert Close Message</label>
+                    <comment><![CDATA[Default: By closing this window you acknowledge that your experience on this website may be degraded.]]></comment>
+                </field>
+                <field id="close_link" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Alert Close Link Text</label>
+                    <comment><![CDATA[Default: Close This Window]]></comment>
+                </field>
+                <field id="close_url" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Alert Close Link URL</label>
+                    <comment><![CDATA[Default: #]]></comment>
+                </field>
+                <field id="ie_version" translate="label" type="select" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Version of IE to reject</label>
+                    <comment><![CDATA[Default: 10]]></comment>
+                    <source_model>Augustash\Jreject\Model\Config\Source\Msie</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
